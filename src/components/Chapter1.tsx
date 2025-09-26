@@ -36,7 +36,7 @@ export default function Chapter1() {
           </p>
           
           <p className="text-lg leading-relaxed text-gray-700">
-            I remember the excitement of seeing my first "Hello, World!" appear on the screen. 
+            I remember the excitement of seeing my first &ldquo;Hello, World!&rdquo; appear on the screen. 
             That simple moment opened up a universe of possibilities I never knew existed.
           </p>
 

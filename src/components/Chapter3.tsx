@@ -41,7 +41,7 @@ plt.show()
           </div>
           
           <p className="text-lg leading-relaxed text-gray-700">
-            The transition from web development to data science wasn't planned - 
+            The transition from web development to data science wasn&apos;t planned - 
             it was a natural evolution. I discovered that behind every great 
             application lies great data, and I wanted to understand that language.
           </p>
@@ -80,8 +80,8 @@ plt.show()
           <div className="bg-emerald-100 p-4 rounded-lg mt-6">
             <h4 className="font-semibold text-emerald-800 mb-2">Key Learning Moment</h4>
             <p className="text-emerald-700 text-sm">
-              "The day I created my first predictive model and saw it actually work - 
-              that's when I knew I found my calling."
+              &ldquo;The day I created my first predictive model and saw it actually work - 
+              that&apos;s when I knew I found my calling.&rdquo;
             </p>
           </div>
         </motion.div>
