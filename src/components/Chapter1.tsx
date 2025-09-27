@@ -5,15 +5,30 @@ import { Code, Lightbulb, BookOpen } from 'lucide-react';
 import Chapter from './Chapter';
 
 export default function Chapter1() {
-  const codeSnippet = `print("Hello, World!")
-# My first line of code
-# Little did I know this would change everything...`;
+  const codeSnippet = `<!DOCTYPE html>
+<html>
+<head>
+    <title>1001 Facts - Interesting Facts</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .fact { margin: 20px; padding: 15px; 
+               border-left: 4px solid #007bff; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to 1001 Facts!</h1>
+    <div class="fact">
+        <h3>Did you know?</h3>
+        <p>This was my first real website project...</p>
+    </div>
+</body>
+</html>`;
 
   return (
     <Chapter
       id="chapter-1"
       title="Chapter 1"
-      subtitle="The First Spark"
+      subtitle="Discovering My Passion for Coding"
       backgroundColor="bg-gradient-to-br from-blue-50 to-indigo-100"
       textColor="text-gray-900"
     >
@@ -26,24 +41,25 @@ export default function Chapter1() {
         >
           <div className="flex items-center space-x-3 mb-6">
             <Lightbulb className="w-8 h-8 text-yellow-500" />
-            <h3 className="text-2xl font-semibold">The Moment It Clicked</h3>
+            <h3 className="text-2xl font-semibold">First Exposure to Web Development</h3>
           </div>
           
           <p className="text-lg leading-relaxed text-gray-700">
-            It was during my first year at university when I stumbled upon programming. 
-            What started as a curiosity about how websites work became an obsession 
-            with solving problems through code.
+            In 2019, I took my first steps into the world of programming through personal projects. 
+            What started as curiosity about how websites work quickly became a passion 
+            that would shape my entire career path.
           </p>
           
           <p className="text-lg leading-relaxed text-gray-700">
-            I remember the excitement of seeing my first &ldquo;Hello, World!&rdquo; appear on the screen. 
-            That simple moment opened up a universe of possibilities I never knew existed.
+            My breakthrough project was <strong>1001 Facts</strong> - a personal website presenting 
+            interesting facts. Built with HTML, CSS, and JavaScript, it was simple but magical. 
+            Seeing my code come to life in a browser sparked something incredible.
           </p>
 
           <div className="flex items-center space-x-4 mt-8">
             <div className="flex items-center space-x-2">
               <BookOpen className="w-5 h-5 text-blue-600" />
-              <span className="text-sm text-gray-600">Self-taught journey begins</span>
+              <span className="text-sm text-gray-600">Personal projects ignite passion</span>
             </div>
           </div>
         </motion.div>
@@ -99,7 +115,7 @@ export default function Chapter1() {
         transition={{ duration: 0.8, delay: 0.8 }}
       >
         <div className="inline-flex items-center space-x-2 bg-blue-100 px-6 py-3 rounded-full">
-          <span className="text-blue-800 font-medium">Year 1 of Studies</span>
+          <span className="text-blue-800 font-medium">2019 - The Beginning</span>
           <div className="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></div>
         </div>
       </motion.div>

@@ -80,10 +80,12 @@ export default function ProgressIndicator({ chapters }: ProgressIndicatorProps) 
             }}
           >
             {chapterId === 'hero' ? 'Introduction' : 
-             chapterId === 'chapter-1' ? 'First Code' :
-             chapterId === 'chapter-2' ? 'First Website' :
-             chapterId === 'chapter-3' ? 'Data Science' :
-             chapterId === 'chapter-4' ? 'Current Work' :
+             chapterId === 'chapter-1' ? 'First Spark (2019)' :
+             chapterId === 'chapter-2' ? 'Engineering (2020-21)' :
+             chapterId === 'chapter-3' ? 'Mobile & Open Source (2022-23)' :
+             chapterId === 'chapter-4' ? 'Professional Dev (2023-24)' :
+             chapterId === 'chapter-5' ? 'Data Science (2024-25)' :
+             chapterId === 'chapter-6' ? 'Future Vision' :
              chapterId}
           </motion.div>
         ))}

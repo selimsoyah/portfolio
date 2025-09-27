@@ -5,26 +5,46 @@ import { BarChart3, Brain, TrendingUp, Database } from 'lucide-react';
 import Chapter from './Chapter';
 
 export default function Chapter3() {
-  const pythonSnippet = `import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+  const reactNativeSnippet = `// Automate - Connecting Mechanics and Car Owners
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet, FlatList } from 'react-native';
+import { connectToDatabase, findNearbyMechanics } from './services/database';
 
-# Loading my first dataset
-df = pd.read_csv('data.csv')
+const AutomateApp = () => {
+  const [mechanics, setMechanics] = useState([]);
+  const [userLocation, setUserLocation] = useState(null);
 
-# The moment I realized data tells stories
-plt.figure(figsize=(10,6))
-sns.scatterplot(data=df, x='feature1', y='target')
-plt.title('My First Data Visualization')
-plt.show()
+  useEffect(() => {
+    // Connect car owners with nearby mechanics
+    const loadMechanics = async () => {
+      const nearbyMechanics = await findNearbyMechanics(userLocation);
+      setMechanics(nearbyMechanics);
+    };
+    
+    if (userLocation) {
+      loadMechanics();
+    }
+  }, [userLocation]);
 
-# This was the beginning of everything...`;
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Find Mechanics Near You</Text>
+      <FlatList
+        data={mechanics}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <MechanicCard mechanic={item} />
+        )}
+      />
+    </View>
+  );
+};`;
 
   return (
     <Chapter
       id="chapter-3"
       title="Chapter 3"
-      subtitle="The Data Awakening"
+      subtitle="Expanding Skills into Mobile & Open Source"
       backgroundColor="bg-gradient-to-br from-emerald-50 to-teal-100"
       textColor="text-gray-900"
     >
@@ -37,19 +57,19 @@ plt.show()
         >
           <div className="flex items-center space-x-3 mb-6">
             <Brain className="w-8 h-8 text-emerald-600" />
-            <h3 className="text-2xl font-semibold">Discovering Patterns</h3>
+            <h3 className="text-2xl font-semibold">Mobile Development & Open Source</h3>
           </div>
           
           <p className="text-lg leading-relaxed text-gray-700">
-            The transition from web development to data science wasn&apos;t planned - 
-            it was a natural evolution. I discovered that behind every great 
-            application lies great data, and I wanted to understand that language.
+            During 2022-2023, I expanded my horizons into mobile development and 
+            open-source contributions. This period taught me the importance of 
+            building solutions that reach users anywhere, anytime.
           </p>
           
           <p className="text-lg leading-relaxed text-gray-700">
-            My first pandas DataFrame felt like magic. Suddenly, I could ask 
-            questions of data and get answers. Each visualization revealed 
-            stories hidden in numbers.
+            I developed <strong>Automate</strong>, a mobile app connecting mechanics and car owners 
+            using React Native and SQL. Simultaneously, I contributed to <strong>React-Bootstrap</strong>, 
+            enhancing the open-source UI library with TypeScript improvements.
           </p>
 
           <div className="grid grid-cols-2 gap-4 mt-8">
@@ -60,8 +80,8 @@ plt.show()
             >
               <Database className="w-5 h-5 text-blue-600" />
               <div>
-                <div className="font-semibold text-sm">Python & Pandas</div>
-                <div className="text-xs text-gray-600">Data Manipulation</div>
+                <div className="font-semibold text-sm">React Native</div>
+                <div className="text-xs text-gray-600">Mobile Development</div>
               </div>
             </motion.div>
             <motion.div
@@ -71,8 +91,8 @@ plt.show()
             >
               <BarChart3 className="w-5 h-5 text-emerald-600" />
               <div>
-                <div className="font-semibold text-sm">Visualization</div>
-                <div className="text-xs text-gray-600">Matplotlib & Seaborn</div>
+                <div className="font-semibold text-sm">Open Source</div>
+                <div className="text-xs text-gray-600">TypeScript & UI Libraries</div>
               </div>
             </motion.div>
           </div>
@@ -80,8 +100,8 @@ plt.show()
           <div className="bg-emerald-100 p-4 rounded-lg mt-6">
             <h4 className="font-semibold text-emerald-800 mb-2">Key Learning Moment</h4>
             <p className="text-emerald-700 text-sm">
-              &ldquo;The day I created my first predictive model and saw it actually work - 
-              that&apos;s when I knew I found my calling.&rdquo;
+              &ldquo;Contributing to React-Bootstrap taught me the importance of code quality 
+              and collaboration in large-scale projects.&rdquo;
             </p>
           </div>
         </motion.div>
@@ -154,7 +174,7 @@ plt.show()
             <div className="w-3 h-3 bg-red-500 rounded-full"></div>
             <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
             <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-            <span className="text-gray-400 text-sm ml-4">first_analysis.py</span>
+                        <span className="text-gray-400 text-sm ml-4">AutomateApp.tsx</span>
           </div>
           
           <motion.pre
@@ -165,18 +185,18 @@ plt.show()
             viewport={{ once: true }}
           >
             <code>
-              {pythonSnippet.split('\n').map((line, index) => (
+              {reactNativeSnippet.split('\n').map((line: string, index: number) => (
                 <div
                   key={index}
                   className="block"
                 >
                   <span className="text-gray-500 select-none mr-4">{String(index + 1).padStart(2, ' ')}</span>
                   <span className={
-                    line.includes('import') ? 'text-purple-400' :
-                    line.includes('#') ? 'text-gray-500' :
-                    line.includes('=') ? 'text-blue-400' :
-                    line.includes('plt.') || line.includes('sns.') ? 'text-yellow-400' :
-                    'text-green-400'
+                    line.includes('import') || line.includes('from') ? 'text-purple-400' :
+                    line.includes('//') ? 'text-gray-500' :
+                    line.includes('const') || line.includes('useState') || line.includes('useEffect') ? 'text-blue-400' :
+                    line.includes("'") || line.includes('"') ? 'text-green-400' :
+                    'text-gray-300'
                   }>
                     {line}
                   </span>
@@ -187,29 +207,38 @@ plt.show()
         </div>
       </motion.div>
 
-      {/* Skills Gained */}
+      {/* Project Highlights */}
       <motion.div
-        className="mt-16 grid md:grid-cols-3 gap-6"
+        className="mt-16 grid md:grid-cols-2 gap-6"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.4 }}
       >
-        {[
-          { icon: Database, title: 'Data Processing', desc: 'Pandas, NumPy, SQL' },
-          { icon: BarChart3, title: 'Visualization', desc: 'Matplotlib, Seaborn, Plotly' },
-          { icon: Brain, title: 'Machine Learning', desc: 'Scikit-learn, TensorFlow' }
-        ].map((skill, index) => (
-          <motion.div
-            key={index}
-            className="bg-white p-6 rounded-lg shadow-lg text-center"
-            whileHover={{ y: -5 }}
-            transition={{ duration: 0.3 }}
-          >
-            <skill.icon className="w-12 h-12 text-emerald-600 mx-auto mb-4" />
-            <h4 className="font-semibold text-gray-800 mb-2">{skill.title}</h4>
-            <p className="text-sm text-gray-600">{skill.desc}</p>
-          </motion.div>
-        ))}
+        <div className="bg-white p-6 rounded-lg shadow-lg">
+          <Database className="w-12 h-12 text-emerald-600 mb-4" />
+          <h4 className="font-semibold text-gray-800 mb-2">📱 Automate Mobile App</h4>
+          <p className="text-sm text-gray-600 mb-3">
+            React Native application connecting mechanics and car owners with real-time location services and SQL database integration.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded">React Native</span>
+            <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded">SQL</span>
+            <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded">Mobile Development</span>
+          </div>
+        </div>
+
+        <div className="bg-white p-6 rounded-lg shadow-lg">
+          <BarChart3 className="w-12 h-12 text-emerald-600 mb-4" />
+          <h4 className="font-semibold text-gray-800 mb-2">🔧 React-Bootstrap Contributions</h4>
+          <p className="text-sm text-gray-600 mb-3">
+            Open-source contributions to the popular UI library, implementing code enhancements and bug fixes using TypeScript.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded">TypeScript</span>
+            <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded">Open Source</span>
+            <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded">UI Libraries</span>
+          </div>
+        </div>
       </motion.div>
 
       <motion.div
@@ -219,7 +248,7 @@ plt.show()
         transition={{ duration: 0.8, delay: 1.8 }}
       >
         <div className="inline-flex items-center space-x-2 bg-emerald-100 px-6 py-3 rounded-full">
-          <span className="text-emerald-800 font-medium">Data Science Journey Begins</span>
+          <span className="text-emerald-800 font-medium">2022-2023 - Mobile & Open Source Exploration</span>
           <div className="w-2 h-2 bg-emerald-600 rounded-full animate-pulse"></div>
         </div>
       </motion.div>
