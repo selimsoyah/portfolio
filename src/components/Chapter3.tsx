@@ -5,26 +5,11 @@ import { BarChart3, Brain, TrendingUp, Database } from 'lucide-react';
 import Chapter from './Chapter';
 
 export default function Chapter3() {
-  const pythonSnippet = `import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-# Loading my first dataset
-df = pd.read_csv('data.csv')
-
-# The moment I realized data tells stories
-plt.figure(figsize=(10,6))
-sns.scatterplot(data=df, x='feature1', y='target')
-plt.title('My First Data Visualization')
-plt.show()
-
-# This was the beginning of everything...`;
-
   return (
     <Chapter
       id="chapter-3"
       title="Chapter 3"
-      subtitle="The Data Awakening"
+      subtitle="Mobile & Open Source Contributions"
       backgroundColor="bg-gradient-to-br from-emerald-50 to-teal-100"
       textColor="text-gray-900"
     >
@@ -37,19 +22,24 @@ plt.show()
         >
           <div className="flex items-center space-x-3 mb-6">
             <Brain className="w-8 h-8 text-emerald-600" />
-            <h3 className="text-2xl font-semibold">Discovering Patterns</h3>
+            <h3 className="text-2xl font-semibold">Mobile Development & Open Source</h3>
           </div>
           
           <p className="text-lg leading-relaxed text-gray-700">
-            The transition from web development to data science wasn&apos;t planned - 
-            it was a natural evolution. I discovered that behind every great 
-            application lies great data, and I wanted to understand that language.
+            As my skills grew, I ventured into mobile development and discovered 
+            the power of open source collaboration. This chapter represents my 
+            expansion into different platforms and my first contributions to the developer community.
           </p>
           
           <p className="text-lg leading-relaxed text-gray-700">
-            My first pandas DataFrame felt like magic. Suddenly, I could ask 
-            questions of data and get answers. Each visualization revealed 
-            stories hidden in numbers.
+            Building <strong>Automate</strong>, my mobile application, taught me the intricacies 
+            of mobile user experience and cross-platform development. Meanwhile, contributing 
+            to <strong>React-Bootstrap</strong> showed me how global collaboration shapes the tools we all use.
+          </p>
+
+          <p className="text-lg leading-relaxed text-gray-700">
+            This period was about understanding that programming isn't just about building 
+            applications—it's about contributing to an ecosystem that benefits everyone.
           </p>
 
           <div className="grid grid-cols-2 gap-4 mt-8">
@@ -60,8 +50,8 @@ plt.show()
             >
               <Database className="w-5 h-5 text-blue-600" />
               <div>
-                <div className="font-semibold text-sm">Python & Pandas</div>
-                <div className="text-xs text-gray-600">Data Manipulation</div>
+                <div className="font-semibold text-sm">Mobile Development</div>
+                <div className="text-xs text-gray-600">Cross-Platform Apps</div>
               </div>
             </motion.div>
             <motion.div
@@ -71,17 +61,17 @@ plt.show()
             >
               <BarChart3 className="w-5 h-5 text-emerald-600" />
               <div>
-                <div className="font-semibold text-sm">Visualization</div>
-                <div className="text-xs text-gray-600">Matplotlib & Seaborn</div>
+                <div className="font-semibold text-sm">Open Source</div>
+                <div className="text-xs text-gray-600">Community Contributions</div>
               </div>
             </motion.div>
           </div>
 
           <div className="bg-emerald-100 p-4 rounded-lg mt-6">
-            <h4 className="font-semibold text-emerald-800 mb-2">Key Learning Moment</h4>
+            <h4 className="font-semibold text-emerald-800 mb-2">💡 Key Insight</h4>
             <p className="text-emerald-700 text-sm">
-              &ldquo;The day I created my first predictive model and saw it actually work - 
-              that&apos;s when I knew I found my calling.&rdquo;
+              &ldquo;Contributing to React-Bootstrap taught me that great software is built 
+              by communities, not just individuals. Every pull request made me a better developer.&rdquo;
             </p>
           </div>
         </motion.div>
@@ -92,35 +82,70 @@ plt.show()
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative"
         >
-          {/* Data Visualization Mockup */}
-          <div className="bg-white rounded-lg shadow-2xl p-6">
-            <div className="flex items-center justify-between mb-4">
-              <h4 className="font-semibold text-gray-800">Sales Prediction Model</h4>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-xs text-gray-600">Active</span>
-              </div>
-            </div>
-            
-            {/* Simulated Chart */}
-            <div className="h-48 relative bg-gray-50 rounded flex items-end justify-center p-4 space-x-2">
-              {[65, 78, 82, 95, 88, 92, 96].map((height, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-gradient-to-t from-emerald-500 to-emerald-400 rounded-t"
-                  style={{ width: '20px' }}
-                  initial={{ height: 0 }}
-                  whileInView={{ height: `${height}%` }}
-                  transition={{ duration: 0.8, delay: index * 0.1 + 0.5 }}
-                />
-              ))}
-            </div>
-            
-            <div className="mt-4 flex items-center justify-between text-sm text-gray-600">
-              <span>Accuracy: 94.2%</span>
-              <div className="flex items-center space-x-1">
-                <TrendingUp className="w-4 h-4 text-green-500" />
-                <span className="text-green-600">+12% improvement</span>
+          {/* Mobile App Mockup */}
+          <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl shadow-2xl p-6 max-w-sm mx-auto">
+            <div className="bg-black rounded-2xl p-1">
+              <div className="bg-white rounded-xl overflow-hidden">
+                {/* Phone Status Bar */}
+                <div className="bg-gray-900 text-white text-xs px-4 py-2 flex justify-between items-center">
+                  <span>9:41</span>
+                  <div className="flex space-x-1">
+                    <div className="w-1 h-1 bg-white rounded-full"></div>
+                    <div className="w-1 h-1 bg-white rounded-full"></div>
+                    <div className="w-1 h-1 bg-white rounded-full"></div>
+                  </div>
+                </div>
+                
+                {/* App Header */}
+                <div className="bg-emerald-600 text-white p-4">
+                  <div className="flex items-center justify-between">
+                    <h4 className="font-bold text-lg">Automate</h4>
+                    <a 
+                      href="https://github.com/SalimSalimov/Automate" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-emerald-200 hover:text-white transition-colors text-xs"
+                    >
+                      GitHub →
+                    </a>
+                  </div>
+                  <p className="text-emerald-100 text-sm mt-1">Task Automation Made Simple</p>
+                </div>
+                
+                {/* App Content */}
+                <div className="p-4 h-64 bg-gray-50">
+                  <div className="space-y-3">
+                    <div className="bg-white rounded-lg p-3 shadow-sm border border-gray-200">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                          <Database className="w-5 h-5 text-blue-600" />
+                        </div>
+                        <div className="flex-1">
+                          <h5 className="font-medium text-gray-800 text-sm">Daily Backup</h5>
+                          <p className="text-xs text-gray-600">Automated file synchronization</p>
+                        </div>
+                        <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                          <div className="w-2 h-2 bg-white rounded-full"></div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-white rounded-lg p-3 shadow-sm border border-gray-200">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+                          <Brain className="w-5 h-5 text-purple-600" />
+                        </div>
+                        <div className="flex-1">
+                          <h5 className="font-medium text-gray-800 text-sm">Smart Reminders</h5>
+                          <p className="text-xs text-gray-600">AI-powered notifications</p>
+                        </div>
+                        <div className="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center">
+                          <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -142,48 +167,88 @@ plt.show()
         </motion.div>
       </div>
 
-      {/* Code Preview */}
+      {/* React-Bootstrap Contribution Showcase */}
       <motion.div
         className="mt-16"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
       >
-        <div className="bg-gray-900 rounded-lg p-6 shadow-2xl max-w-4xl mx-auto">
-          <div className="flex items-center space-x-2 mb-4">
-            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-            <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-            <span className="text-gray-400 text-sm ml-4">first_analysis.py</span>
+        <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg p-8 shadow-xl max-w-4xl mx-auto border border-blue-200">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">R</span>
+              </div>
+              <div>
+                <h4 className="text-2xl font-semibold text-gray-800">React-Bootstrap</h4>
+                <p className="text-blue-600 text-sm">Open Source Contribution</p>
+              </div>
+            </div>
+            <a 
+              href="https://github.com/react-bootstrap/react-bootstrap" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800 transition-colors font-medium"
+            >
+              View Repository →
+            </a>
           </div>
           
-          <motion.pre
-            className="text-sm leading-relaxed overflow-x-auto animate-gpu"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <code>
-              {pythonSnippet.split('\n').map((line, index) => (
-                <div
-                  key={index}
-                  className="block"
-                >
-                  <span className="text-gray-500 select-none mr-4">{String(index + 1).padStart(2, ' ')}</span>
-                  <span className={
-                    line.includes('import') ? 'text-purple-400' :
-                    line.includes('#') ? 'text-gray-500' :
-                    line.includes('=') ? 'text-blue-400' :
-                    line.includes('plt.') || line.includes('sns.') ? 'text-yellow-400' :
-                    'text-green-400'
-                  }>
-                    {line}
-                  </span>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-lg p-6 border border-blue-100">
+              <h5 className="font-semibold text-blue-800 mb-4 flex items-center">
+                <TrendingUp className="w-5 h-5 mr-2" />
+                My Contributions
+              </h5>
+              <ul className="text-sm text-gray-700 space-y-3">
+                <li className="flex items-start space-x-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Improved component accessibility features</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Enhanced TypeScript definitions</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Fixed component rendering issues</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span>Updated documentation examples</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-white rounded-lg p-6 border border-blue-100">
+              <h5 className="font-semibold text-blue-800 mb-4 flex items-center">
+                <Brain className="w-5 h-5 mr-2" />
+                Impact & Learning
+              </h5>
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-600">Community Impact</span>
+                  <span className="text-sm font-medium text-blue-600">Global Scale</span>
                 </div>
-              ))}
-            </code>
-          </motion.pre>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-600">Code Review Process</span>
+                  <span className="text-sm font-medium text-green-600">Mastered</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-600">Open Source Etiquette</span>
+                  <span className="text-sm font-medium text-purple-600">Learned</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-4 rounded-lg">
+            <p className="text-sm italic">
+              🌟 "Contributing to React-Bootstrap taught me that open source is about more than code—
+              it's about building tools that empower millions of developers worldwide."
+            </p>
+          </div>
         </div>
       </motion.div>
 
@@ -195,9 +260,9 @@ plt.show()
         transition={{ duration: 0.8, delay: 1.4 }}
       >
         {[
-          { icon: Database, title: 'Data Processing', desc: 'Pandas, NumPy, SQL' },
-          { icon: BarChart3, title: 'Visualization', desc: 'Matplotlib, Seaborn, Plotly' },
-          { icon: Brain, title: 'Machine Learning', desc: 'Scikit-learn, TensorFlow' }
+          { icon: Database, title: 'Mobile Development', desc: 'React Native, Flutter, Native APIs' },
+          { icon: BarChart3, title: 'Open Source', desc: 'Git, GitHub, Code Review' },
+          { icon: Brain, title: 'Community Building', desc: 'Documentation, Collaboration' }
         ].map((skill, index) => (
           <motion.div
             key={index}
@@ -218,8 +283,8 @@ plt.show()
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.8 }}
       >
-        <div className="inline-flex items-center space-x-2 bg-emerald-100 px-6 py-3 rounded-full">
-          <span className="text-emerald-800 font-medium">Data Science Journey Begins</span>
+        <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-100 to-blue-100 px-6 py-3 rounded-full border border-emerald-200">
+          <span className="text-emerald-800 font-medium">Mobile & Open Source Mastery</span>
           <div className="w-2 h-2 bg-emerald-600 rounded-full animate-pulse"></div>
         </div>
       </motion.div>
