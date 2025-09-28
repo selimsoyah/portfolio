@@ -5,27 +5,11 @@ import { Globe, Palette, Rocket, Code2 } from 'lucide-react';
 import Chapter from './Chapter';
 
 export default function Chapter2() {
-  const htmlSnippet = `<!DOCTYPE html>
-<html>
-<head>
-    <title>My First Website</title>
-    <style>
-        body { 
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            font-family: Arial, sans-serif;
-        }
-    </style>
-</head>
-<body>
-    <h1>Welcome to My World!</h1>
-</body>
-</html>`;
-
   return (
     <Chapter
       id="chapter-2"
       title="Chapter 2"
-      subtitle="Building My Digital Canvas"
+      subtitle="Building the Foundation"
       backgroundColor="bg-gradient-to-br from-purple-50 to-pink-100"
       textColor="text-gray-900"
     >
@@ -38,34 +22,39 @@ export default function Chapter2() {
         >
           <div className="flex items-center space-x-3 mb-6">
             <Globe className="w-8 h-8 text-purple-600" />
-            <h3 className="text-2xl font-semibold">From Code to Creation</h3>
+            <h3 className="text-2xl font-semibold">University & First Real Projects</h3>
           </div>
           
           <p className="text-lg leading-relaxed text-gray-700">
-            After mastering the basics, I was ready to build something real. 
-            My first website was simple but magical - seeing my code come to life 
-            in a browser was absolutely mesmerizing.
+            Entering university marked the beginning of my formal journey into computer science. 
+            It was here that I transformed my curiosity into structured learning, diving deep 
+            into programming fundamentals and software development principles.
           </p>
           
           <p className="text-lg leading-relaxed text-gray-700">
-            Hours spent tweaking CSS, learning about responsive design, and 
-            understanding how the web works. Each small victory felt like 
-            conquering a mountain.
+            During this time, I built two significant projects that would shape my understanding 
+            of full-stack development: <strong>Car Trac</strong>, a comprehensive car management 
+            system, and <strong>Click EZ</strong>, an innovative advertising platform.
+          </p>
+
+          <p className="text-lg leading-relaxed text-gray-700">
+            These projects taught me the importance of user experience, database design, 
+            and building scalable web applications that solve real-world problems.
           </p>
 
           <div className="grid grid-cols-2 gap-4 mt-8">
             <div className="flex items-center space-x-2 bg-white p-4 rounded-lg shadow-sm">
               <Code2 className="w-5 h-5 text-blue-600" />
               <div>
-                <div className="font-semibold text-sm">HTML & CSS</div>
-                <div className="text-xs text-gray-600">Structure & Style</div>
+                <div className="font-semibold text-sm">Full-Stack Dev</div>
+                <div className="text-xs text-gray-600">Frontend & Backend</div>
               </div>
             </div>
             <div className="flex items-center space-x-2 bg-white p-4 rounded-lg shadow-sm">
               <Palette className="w-5 h-5 text-pink-600" />
               <div>
-                <div className="font-semibold text-sm">Design</div>
-                <div className="text-xs text-gray-600">Visual Appeal</div>
+                <div className="font-semibold text-sm">Database Design</div>
+                <div className="text-xs text-gray-600">Data Architecture</div>
               </div>
             </div>
           </div>
@@ -77,44 +66,54 @@ export default function Chapter2() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative"
         >
-          {/* Browser Window Mockup */}
-          <div className="bg-white rounded-lg shadow-2xl overflow-hidden">
-            <div className="bg-gray-200 px-4 py-3 flex items-center space-x-2">
-              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-              <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-              <div className="flex-1 bg-white rounded mx-4 px-3 py-1">
-                <span className="text-gray-500 text-sm">localhost:3000</span>
+          {/* Car Trac Project Showcase */}
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg shadow-xl overflow-hidden border border-blue-200">
+            <div className="bg-blue-600 px-6 py-4 text-white">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-2">
+                  <Globe className="w-5 h-5" />
+                  <span className="font-semibold">Car Trac</span>
+                </div>
+                <a 
+                  href="https://github.com/SalimSalimov/CarTrac" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-200 hover:text-white transition-colors text-sm"
+                >
+                  View on GitHub →
+                </a>
               </div>
             </div>
             
-            {/* Website Preview */}
-            <div className="h-64 bg-gradient-to-br from-purple-400 to-pink-400 flex items-center justify-center relative overflow-hidden">
-              <motion.h1
-                className="text-4xl font-bold text-white text-center"
-                initial={{ scale: 0, rotate: -180 }}
-                whileInView={{ scale: 1, rotate: 0 }}
-                transition={{ duration: 1, delay: 0.5 }}
-              >
-                Welcome to My World!
-              </motion.h1>
+            <div className="p-6">
+              <h4 className="text-xl font-semibold text-gray-800 mb-3">Car Management System</h4>
+              <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                A comprehensive web application for managing car dealerships, featuring 
+                inventory management, customer records, and sales tracking. Built during 
+                my university years to understand full-stack development.
+              </p>
               
-              {/* Floating Elements */}
-              <motion.div
-                className="absolute top-4 right-4 w-8 h-8 bg-white rounded-full opacity-20"
-                animate={{ y: [0, -20, 0] }}
-                transition={{ duration: 3, repeat: Infinity }}
-              />
-              <motion.div
-                className="absolute bottom-8 left-8 w-6 h-6 bg-yellow-300 rounded-full opacity-30"
-                animate={{ x: [0, 20, 0] }}
-                transition={{ duration: 4, repeat: Infinity }}
-              />
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-3 py-1 bg-blue-200 text-blue-800 rounded-full text-xs font-medium">PHP</span>
+                <span className="px-3 py-1 bg-green-200 text-green-800 rounded-full text-xs font-medium">MySQL</span>
+                <span className="px-3 py-1 bg-orange-200 text-orange-800 rounded-full text-xs font-medium">HTML/CSS</span>
+                <span className="px-3 py-1 bg-yellow-200 text-yellow-800 rounded-full text-xs font-medium">JavaScript</span>
+              </div>
+              
+              <div className="bg-white rounded-lg p-4 border border-gray-200">
+                <div className="text-sm text-gray-500 mb-2">Key Features:</div>
+                <ul className="text-sm text-gray-700 space-y-1">
+                  <li>• Vehicle inventory management</li>
+                  <li>• Customer database system</li>
+                  <li>• Sales tracking & reporting</li>
+                  <li>• Admin dashboard interface</li>
+                </ul>
+              </div>
             </div>
           </div>
           
           <motion.div
-            className="absolute -bottom-4 -left-4 bg-purple-600 text-white p-3 rounded-full shadow-lg"
+            className="absolute -bottom-4 -right-4 bg-indigo-600 text-white p-3 rounded-full shadow-lg"
             animate={{ 
               rotate: [0, -10, 10, 0],
               scale: [1, 1.1, 1]
@@ -130,48 +129,63 @@ export default function Chapter2() {
         </motion.div>
       </div>
 
-      {/* Code Editor Preview */}
+      {/* Click EZ Project Showcase */}
       <motion.div
         className="mt-16"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
       >
-        <div className="bg-gray-900 rounded-lg p-6 shadow-2xl max-w-3xl mx-auto">
-          <div className="flex items-center space-x-2 mb-4">
-            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-            <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-            <span className="text-gray-400 text-sm ml-4">index.html</span>
+        <div className="bg-gradient-to-br from-purple-50 to-pink-100 rounded-lg p-8 shadow-xl max-w-4xl mx-auto border border-purple-200">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center space-x-3">
+              <Palette className="w-6 h-6 text-purple-600" />
+              <h4 className="text-2xl font-semibold text-gray-800">Click EZ</h4>
+            </div>
+            <a 
+              href="https://github.com/SalimSalimov/ClickEZ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-purple-600 hover:text-purple-800 transition-colors font-medium"
+            >
+              View on GitHub →
+            </a>
           </div>
           
-          <motion.pre
-            className="text-sm leading-relaxed overflow-x-auto animate-gpu"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <code className="text-blue-400">
-              {htmlSnippet.split('\n').map((line, index) => (
-                <div
-                  key={index}
-                  className="block"
-                >
-                  <span className="text-gray-500 select-none mr-4">{String(index + 1).padStart(2, ' ')}</span>
-                  <span dangerouslySetInnerHTML={{
-                    __html: line
-                      .replace(/&/g, "&amp;")
-                      .replace(/</g, "&lt;")
-                      .replace(/>/g, "&gt;")
-                      .replace(/(DOCTYPE|html|head|body|title|style)/g, '<span class="text-red-400">$1</span>')
-                      .replace(/(background|font-family|linear-gradient)/g, '<span class="text-yellow-400">$1</span>')
-                      .replace(/(&quot;[^&]*&quot;)/g, '<span class="text-green-400">$1</span>')
-                  }} />
-                </div>
-              ))}
-            </code>
-          </motion.pre>
+          <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+            An innovative advertising platform that simplifies the process of creating 
+            and managing digital advertisements. Click EZ was my exploration into 
+            user-centered design and business applications.
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-lg p-4 border border-purple-100">
+              <h5 className="font-semibold text-purple-800 mb-3">🎯 Core Features</h5>
+              <ul className="text-sm text-gray-700 space-y-2">
+                <li>• Intuitive ad creation interface</li>
+                <li>• Campaign management system</li>
+                <li>• Performance analytics dashboard</li>
+                <li>• User-friendly design tools</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white rounded-lg p-4 border border-purple-100">
+              <h5 className="font-semibold text-purple-800 mb-3">💻 Technology Stack</h5>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">React</span>
+                <span className="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">Node.js</span>
+                <span className="px-2 py-1 bg-yellow-100 text-yellow-800 rounded text-xs">Express</span>
+                <span className="px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">MongoDB</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 rounded-lg">
+            <p className="text-sm italic">
+              💡 &ldquo;Click EZ taught me the importance of user experience design and how 
+              technology can simplify complex business processes.&rdquo;
+            </p>
+          </div>
         </div>
       </motion.div>
 
@@ -181,8 +195,8 @@ export default function Chapter2() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.2 }}
       >
-        <div className="inline-flex items-center space-x-2 bg-purple-100 px-6 py-3 rounded-full">
-          <span className="text-purple-800 font-medium">First Website Deployed</span>
+        <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-100 to-pink-100 px-6 py-3 rounded-full border border-purple-200">
+          <span className="text-purple-800 font-medium">University Foundation Complete</span>
           <div className="w-2 h-2 bg-purple-600 rounded-full animate-pulse"></div>
         </div>
       </motion.div>
