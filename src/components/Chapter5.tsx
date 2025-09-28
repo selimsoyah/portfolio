@@ -29,7 +29,7 @@ export default function Chapter5() {
           <div className="bg-white p-8 rounded-xl shadow-lg text-left">
             <p className="text-lg leading-relaxed text-gray-700 mb-6">
               After mastering full-stack development, I discovered that the most fascinating 
-              stories weren't just told through user interfaces—they were hidden in data. 
+              stories weren&apos;t just told through user interfaces—they were hidden in data. 
               This realization sparked my transition into data science and machine learning.
             </p>
             
@@ -167,9 +167,9 @@ export default function Chapter5() {
             
             <div className="mt-8 bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-6 rounded-lg">
               <p className="text-lg italic">
-                💡 "Nexus-Analytics taught me that data science isn't just about algorithms—
-                it's about translating complex patterns into stories that drive business decisions 
-                and create real-world impact."
+                💡 &ldquo;Nexus-Analytics taught me that data science isn&apos;t just about algorithms—
+                it&apos;s about translating complex patterns into stories that drive business decisions 
+                and create real-world impact.&rdquo;
               </p>
             </div>
           </div>

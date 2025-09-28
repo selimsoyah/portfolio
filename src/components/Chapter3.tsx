@@ -38,8 +38,8 @@ export default function Chapter3() {
           </p>
 
           <p className="text-lg leading-relaxed text-gray-700">
-            This period was about understanding that programming isn't just about building 
-            applications—it's about contributing to an ecosystem that benefits everyone.
+            This period was about understanding that programming isn&apos;t just about building 
+            applications—it&apos;s about contributing to an ecosystem that benefits everyone.
           </p>
 
           <div className="grid grid-cols-2 gap-4 mt-8">
@@ -245,8 +245,8 @@ export default function Chapter3() {
           
           <div className="mt-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-4 rounded-lg">
             <p className="text-sm italic">
-              🌟 "Contributing to React-Bootstrap taught me that open source is about more than code—
-              it's about building tools that empower millions of developers worldwide."
+              🌟 &ldquo;Contributing to React-Bootstrap taught me that open source is about more than code—
+              it&apos;s about building tools that empower millions of developers worldwide.&rdquo;
             </p>
           </div>
         </div>

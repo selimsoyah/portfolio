@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { 
-  Mail, MapPin, Globe, Github, Linkedin,
+  Mail, Github, Linkedin,
   Code, Database, Brain, Monitor, Award,
   Users, Zap, Target, Rocket
 } from 'lucide-react';
@@ -87,12 +87,6 @@ export default function Chapter6() {
     }
   ];
 
-  const languages = [
-    { language: "Arabic", level: "Native", flag: "🇹🇳" },
-    { language: "French", level: "Native", flag: "🇫🇷" },
-    { language: "English", level: "CEFR C1", flag: "🇬🇧" }
-  ];
-
   return (
     <Chapter
       id="chapter-6"
@@ -123,7 +117,7 @@ export default function Chapter6() {
             </p>
             
             <p className="text-lg leading-relaxed text-gray-700 mb-6">
-              Today, I'm not just a developer or data scientist—I'm a lifelong learner who 
+              Today, I&apos;m not just a developer or data scientist—I&apos;m a lifelong learner who 
               bridges the gap between traditional software engineering and cutting-edge AI. 
               My goal is to build intelligent systems that solve real-world problems and 
               create meaningful impact.
@@ -377,7 +371,7 @@ export default function Chapter6() {
         >
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-violet-100 to-purple-100 px-8 py-4 rounded-full border border-violet-200">
             <Rocket className="w-5 h-5 text-violet-600" />
-            <span className="text-violet-800 font-medium text-lg">The Future Awaits - Let's Build It Together</span>
+            <span className="text-violet-800 font-medium text-lg">The Future Awaits - Let&apos;s Build It Together</span>
             <div className="w-3 h-3 bg-violet-600 rounded-full animate-pulse"></div>
           </div>
         </motion.div>

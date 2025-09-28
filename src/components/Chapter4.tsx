@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import Chapter from './Chapter';
 
 export default function Chapter4() {

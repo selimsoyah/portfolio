@@ -182,8 +182,8 @@ export default function Chapter2() {
           
           <div className="mt-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 rounded-lg">
             <p className="text-sm italic">
-              💡 "Click EZ taught me the importance of user experience design and how 
-              technology can simplify complex business processes."
+              💡 &ldquo;Click EZ taught me the importance of user experience design and how 
+              technology can simplify complex business processes.&rdquo;
             </p>
           </div>
         </div>
