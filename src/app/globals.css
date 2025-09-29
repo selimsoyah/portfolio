@@ -43,10 +43,39 @@ body {
   will-change: transform, opacity;
   backface-visibility: hidden;
   perspective: 1000px;
+  contain: layout style paint;
 }
 
 /* Optimize scroll performance */
 .scroll-container {
   transform: translateZ(0);
   -webkit-overflow-scrolling: touch;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Hardware acceleration for common elements */
+img, video, canvas, iframe {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Smooth font rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimize repaints */
+.bg-gradient-to-r, .bg-gradient-to-br, .bg-gradient-to-l {
+  will-change: auto;
+  contain: layout style;
 }

@@ -15,10 +15,11 @@ export default function Chapter2() {
     >
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="space-y-6"
+          transition={{ duration: 0.5, ease: [0.25, 0.25, 0, 1] }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="space-y-6 animate-gpu"
         >
           <div className="flex items-center space-x-3 mb-6">
             <Globe className="w-8 h-8 text-purple-600" />
@@ -61,10 +62,11 @@ export default function Chapter2() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative"
+          transition={{ duration: 0.5, delay: 0.1, ease: [0.25, 0.25, 0, 1] }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="relative animate-gpu"
         >
           {/* Car Trac Project Showcase */}
           <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg shadow-xl overflow-hidden border border-blue-200">
@@ -113,15 +115,16 @@ export default function Chapter2() {
           </div>
           
           <motion.div
-            className="absolute -bottom-4 -right-4 bg-indigo-600 text-white p-3 rounded-full shadow-lg"
+            className="absolute -bottom-4 -right-4 bg-indigo-600 text-white p-3 rounded-full shadow-lg animate-gpu"
             animate={{ 
-              rotate: [0, -10, 10, 0],
-              scale: [1, 1.1, 1]
+              rotate: [0, -5, 5, 0],
+              scale: [1, 1.05, 1]
             }}
             transition={{ 
-              duration: 2.5, 
+              duration: 3, 
               repeat: Infinity,
-              delay: 1.5
+              delay: 1.5,
+              ease: "easeInOut"
             }}
           >
             <Rocket className="w-6 h-6" />
@@ -131,10 +134,11 @@ export default function Chapter2() {
 
       {/* Click EZ Project Showcase */}
       <motion.div
-        className="mt-16"
-        initial={{ opacity: 0, y: 50 }}
+        className="mt-16 animate-gpu"
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
+        transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.25, 0, 1] }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         <div className="bg-gradient-to-br from-purple-50 to-pink-100 rounded-lg p-8 shadow-xl max-w-4xl mx-auto border border-purple-200">
           <div className="flex items-center justify-between mb-6">
@@ -190,10 +194,11 @@ export default function Chapter2() {
       </motion.div>
 
       <motion.div
-        className="mt-16 text-center"
-        initial={{ opacity: 0, y: 30 }}
+        className="mt-16 text-center animate-gpu"
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
+        transition={{ duration: 0.5, delay: 0.3, ease: [0.25, 0.25, 0, 1] }}
+        viewport={{ once: true, amount: 0.5 }}
       >
         <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-100 to-pink-100 px-6 py-3 rounded-full border border-purple-200">
           <span className="text-purple-800 font-medium">University Foundation Complete</span>

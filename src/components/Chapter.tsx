@@ -24,32 +24,34 @@ export default function Chapter({
   delay = 0
 }: ChapterProps) {
   const { ref, inView } = useInView({
-    threshold: 0.2,
-    triggerOnce: true, // Only trigger once for better performance
-    rootMargin: '50px 0px' // Start animation earlier
+    threshold: 0.1, // Lower threshold for earlier trigger
+    triggerOnce: true,
+    rootMargin: '100px 0px' // Start animation even earlier
   });
 
   // Memoize animation variants for better performance
   const containerVariants = useMemo(() => ({
-    hidden: { opacity: 0, y: 50 }, // Reduced movement for smoother animation
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6, // Faster duration
+        duration: 0.5,
         delay: delay,
-        staggerChildren: 0.1 // Reduced stagger
+        staggerChildren: 0.05,
+        ease: "easeOut" as const
       }
     }
   }), [delay]);
 
   const itemVariants = useMemo(() => ({
-    hidden: { opacity: 0, y: 30 }, // Reduced movement
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: { 
-        duration: 0.4 // Faster duration
+        duration: 0.4,
+        ease: "easeOut" as const
       }
     }
   }), []);

@@ -52,10 +52,11 @@ export default function Chapter1() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative"
+          transition={{ duration: 0.5, delay: 0.1, ease: [0.25, 0.25, 0, 1] }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="relative animate-gpu"
         >
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6 shadow-lg border border-blue-200">
             <div className="flex items-center justify-between mb-4">
@@ -88,15 +89,16 @@ export default function Chapter1() {
           </div>
           
           <motion.div
-            className="absolute -top-4 -right-4 bg-purple-600 text-white p-3 rounded-full shadow-lg"
+            className="absolute -top-4 -right-4 bg-purple-600 text-white p-3 rounded-full shadow-lg animate-gpu"
             animate={{ 
-              rotate: [0, 10, -10, 0],
-              scale: [1, 1.1, 1]
+              rotate: [0, 5, -5, 0],
+              scale: [1, 1.05, 1]
             }}
             transition={{ 
-              duration: 2, 
+              duration: 3, 
               repeat: Infinity,
-              delay: 1
+              delay: 1,
+              ease: "easeInOut"
             }}
           >
             <Lightbulb className="w-6 h-6" />

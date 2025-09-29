@@ -15,10 +15,11 @@ export default function Chapter3() {
     >
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="space-y-6"
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="space-y-6 animate-gpu"
         >
           <div className="flex items-center space-x-3 mb-6">
             <Brain className="w-8 h-8 text-emerald-600" />
