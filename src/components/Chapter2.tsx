@@ -77,7 +77,7 @@ export default function Chapter2() {
                   <span className="font-semibold">Car Trac</span>
                 </div>
                 <a 
-                  href="https://github.com/SalimSalimov/CarTrac" 
+                  href="https://github.com/selimsoyah/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-blue-200 hover:text-white transition-colors text-sm"
@@ -147,7 +147,7 @@ export default function Chapter2() {
               <h4 className="text-2xl font-semibold text-gray-800">Click EZ</h4>
             </div>
             <a 
-              href="https://github.com/SalimSalimov/ClickEZ" 
+              href="https://github.com/selimsoyah/Click-Ez" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-purple-600 hover:text-purple-800 transition-colors font-medium"

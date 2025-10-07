@@ -84,7 +84,7 @@ export default function Chapter5() {
                 </div>
               </div>
               <a 
-                href="https://github.com/SalimSalimov/Nexus-Analytics" 
+               href="https://github.com/selimsoyah/Nexus-Analytics" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 text-emerald-600 hover:text-emerald-800 transition-colors font-medium"

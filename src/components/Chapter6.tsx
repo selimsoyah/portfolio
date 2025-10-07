@@ -169,9 +169,9 @@ export default function Chapter6() {
             >
               <Github className="w-8 h-8 text-violet-600 mx-auto mb-3" />
               <h4 className="font-semibold text-gray-800 mb-2">GitHub</h4>
-              <a href="https://github.com/SalimSalimov" className="text-sm text-violet-600 hover:underline">
-                github.com/SalimSalimov
-              </a>
+              <a href="https://github.com/selimsoyah" className="text-sm text-violet-600 hover:underline">
+  173:                 github.com/selimsoyah
+  174                </a>
             </motion.div>
 
             <motion.div 
@@ -181,8 +181,8 @@ export default function Chapter6() {
             >
               <Linkedin className="w-8 h-8 text-violet-600 mx-auto mb-3" />
               <h4 className="font-semibold text-gray-800 mb-2">LinkedIn</h4>
-              <a href="https://linkedin.com/in/selimsoyah" className="text-sm text-violet-600 hover:underline">
-                linkedin.com/in/selimsoyah
+              <a href="https://www.linkedin.com/in/salim-soyah/" className="text-sm text-violet-600 hover:underline">
+                linkedin.com/in/salim-soyah/
               </a>
             </motion.div>
           </div>

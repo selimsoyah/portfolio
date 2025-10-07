@@ -102,7 +102,7 @@ export default function Chapter3() {
                   <div className="flex items-center justify-between">
                     <h4 className="font-bold text-lg">Automate</h4>
                     <a 
-                      href="https://github.com/SalimSalimov/Automate" 
+                      href="https://github.com/selimsoyah/Automate_" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-emerald-200 hover:text-white transition-colors text-xs"

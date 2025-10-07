@@ -103,7 +103,7 @@ export default function Chapter4() {
                 </div>
                 
                 <a 
-                  href="https://github.com/SalimSalimov/LangBridge" 
+                   href="https://github.com/selimsoyah" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-800 transition-colors font-medium"
@@ -188,7 +188,7 @@ export default function Chapter4() {
                 </div>
                 
                 <a 
-                  href="https://github.com/SalimSalimov/DarSellami" 
+                  href="https://github.com/selimsoyah/Dar_Sellami" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-2 text-purple-600 hover:text-purple-800 transition-colors font-medium"
