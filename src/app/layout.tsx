@@ -14,12 +14,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Salim Soyah - Portfolio",
-  description: "From First Code to Data Science - A journey of curiosity, learning, and turning data into insights. Full-stack developer and data scientist.",
-  keywords: ["portfolio", "data science", "web development", "full stack", "react", "python", "machine learning"],
+  description: "Data Scientist & ML Engineer based in Hildesheim, Germany. MSc Data Analytics student focused on predictive maintenance, Industry 4.0, and IoT analytics.",
+  keywords: ["portfolio", "data science", "predictive maintenance", "machine learning", "Industry 4.0", "IoT", "Germany", "Hildesheim", "python", "time-series"],
   authors: [{ name: "Salim Soyah" }],
   openGraph: {
     title: "Salim Soyah - Portfolio",
-    description: "From First Code to Data Science - A journey of curiosity, learning, and turning data into insights.",
+    description: "From Tunisia to Germany — pursuing MSc Data Analytics while building predictive maintenance solutions for Industry 4.0.",
     type: "website",
   },
 };

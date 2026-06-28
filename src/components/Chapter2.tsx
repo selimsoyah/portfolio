@@ -27,9 +27,9 @@ export default function Chapter2() {
           </div>
           
           <p className="text-lg leading-relaxed text-gray-700">
-            Entering university marked the beginning of my formal journey into computer science. 
-            It was here that I transformed my curiosity into structured learning, diving deep 
-            into programming fundamentals and software development principles.
+            I began my formal education at <strong>Medtech University</strong>, pursuing an 
+            Engineering Degree in Software Engineering. This foundation gave me the technical 
+            skills and theoretical knowledge to transform my passion for coding into professional expertise.
           </p>
           
           <p className="text-lg leading-relaxed text-gray-700">
@@ -39,7 +39,7 @@ export default function Chapter2() {
           </p>
 
           <p className="text-lg leading-relaxed text-gray-700">
-            These projects taught me the importance of user experience, database design, 
+            These early projects taught me the importance of user experience, database design, 
             and building scalable web applications that solve real-world problems.
           </p>
 

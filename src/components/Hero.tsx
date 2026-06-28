@@ -81,16 +81,25 @@ export default function Hero() {
           
           <motion.h2
             variants={letterVariants}
-            className="text-2xl md:text-4xl font-light mb-6 text-gray-300"
+            className="text-2xl md:text-4xl font-light mb-4 text-gray-300"
           >
-            From First Code to Data Science
+            Data Scientist | ML Engineer | AI Solutions Engineer
           </motion.h2>
+
+          <motion.p
+            variants={letterVariants}
+            className="text-base md:text-lg text-emerald-400 mb-6 font-medium"
+          >
+            Hildesheim, Germany — MSc Data Analytics
+          </motion.p>
           
           <motion.p
             variants={letterVariants}
-            className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
           >
-            Welcome to my journey. A story of curiosity, learning, and the endless pursuit of turning data into insights.
+            From Tunisia to Germany — pursuing a master&apos;s in Data Analytics while merging 
+            data science and machine learning with predictive maintenance, one of Industry 4.0&apos;s 
+            most advanced frontiers.
           </motion.p>
         </motion.div>
 

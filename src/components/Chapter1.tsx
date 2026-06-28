@@ -65,7 +65,7 @@ export default function Chapter1() {
                 <span className="text-gray-700 font-semibold">1001 Facts - My First Project</span>
               </div>
               <a 
-                href="https://github.com/SalimSalimov/1001Facts" 
+                href="https://github.com/selimsoyah" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:text-blue-800 transition-colors text-sm font-medium"
